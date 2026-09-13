@@ -535,7 +535,7 @@ body.no-scroll{overflow:hidden}
 .hero .stat{min-width:120px}
 
 .split{
-  position:relative;width:100%;margin:52px 0 8px;aspect-ratio:16/7;
+  position:relative;width:100%;margin:52px 0 8px;aspect-ratio:16/6;
   border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);
   box-shadow:var(--shadow-lg);background:#f7f3ea;isolation:isolate;
 }
@@ -556,14 +556,19 @@ body.no-scroll{overflow:hidden}
   content:"";position:absolute;inset:0;z-index:1;transition:opacity .35s;
 }
 .split-half.s-games::before{
-  background:linear-gradient(100deg,rgba(12,10,6,.88) 0%,rgba(12,10,6,.62) 55%,rgba(12,10,6,.3) 100%),
-             linear-gradient(0deg,color-mix(in srgb,#a76a12 32%,transparent),transparent 70%);
+  background:
+    radial-gradient(circle at 1px 1px,rgba(255,236,200,.09) 1px,transparent 1.4px) 0 0/18px 18px,
+    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px),
+    radial-gradient(120% 90% at 18% 20%,#3a2710 0%,#1d150b 55%,#110d08 100%);
 }
 .split-half.s-soft::before{
-  background:linear-gradient(260deg,rgba(6,12,16,.88) 0%,rgba(6,12,16,.62) 55%,rgba(6,12,16,.3) 100%),
-             linear-gradient(0deg,color-mix(in srgb,#1c6b85 34%,transparent),transparent 70%);
+  background:
+    radial-gradient(circle at 1px 1px,rgba(200,238,255,.09) 1px,transparent 1.4px) 0 0/18px 18px,
+    repeating-linear-gradient(45deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px),
+    radial-gradient(120% 90% at 82% 20%,#123a48 0%,#0b2029 55%,#071217 100%);
 }
-.split-half:hover::before{opacity:.82}
+.split-half::after{content:"";position:absolute;inset:0;z-index:1;opacity:0;transition:opacity .35s;background:radial-gradient(70% 70% at 50% 50%,rgba(255,255,255,.07),transparent 70%)}
+.split-half:hover::after{opacity:1}
 .split-body{
   position:relative;z-index:2;display:flex;flex-direction:column;gap:6px;
   padding:0 6%;max-width:46%;text-align:left;
@@ -600,8 +605,6 @@ body.no-scroll{overflow:hidden}
   .split-body{max-width:100%;padding:9% 8%}
   .split-half.s-soft .split-body{text-align:left;align-items:flex-start;margin-left:0}
   .split-half.s-soft .split-go{align-self:flex-start}
-  .split-half.s-games::before{background:linear-gradient(180deg,rgba(12,10,6,.86),rgba(12,10,6,.55))}
-  .split-half.s-soft::before{background:linear-gradient(0deg,rgba(6,12,16,.86),rgba(6,12,16,.55))}
 }
 @media (prefers-reduced-motion:reduce){
   .split-img img,.split-go svg{transition:none}
@@ -678,3 +681,21 @@ body.no-scroll{overflow:hidden}
 .btn[disabled]{opacity:.6;cursor:progress}
 button.doc-slot{padding:0;font:inherit;color:inherit;cursor:zoom-in;display:block;width:100%}
 button.doc-slot:hover{border-color:var(--border-strong)}
+
+/* achievement photos */
+.ach.has-photo{flex-wrap:wrap}
+.ach-photo{
+  flex:0 0 100%;position:relative;display:block;padding:0;border:1px solid var(--border);border-radius:12px;
+  overflow:hidden;aspect-ratio:4/3;background:var(--tile-light);cursor:zoom-in;margin-bottom:4px;
+}
+.ach-photo img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.ach-photo.cover img{object-fit:cover;padding:0}
+.ach-photo:hover img{transform:scale(1.04)}
+.ach-photo .zoom{
+  position:absolute;right:9px;top:9px;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:rgba(0,0,0,.55);color:#fff;opacity:0;transition:.2s;
+}
+.ach-photo .zoom svg{width:14px;height:14px}
+.ach-photo:hover .zoom,.ach-photo:focus-visible .zoom{opacity:1}
+.ach.has-photo > div{flex:1 1 0;min-width:0}
+.ach-grid{align-items:start}
