@@ -682,20 +682,18 @@ body.no-scroll{overflow:hidden}
 button.doc-slot{padding:0;font:inherit;color:inherit;cursor:zoom-in;display:block;width:100%}
 button.doc-slot:hover{border-color:var(--border-strong)}
 
-/* achievement photos */
-.ach.has-photo{flex-wrap:wrap}
+/* achievement photos: take the place of the rank badge */
 .ach-photo{
-  flex:0 0 100%;position:relative;display:block;padding:0;border:1px solid var(--border);border-radius:12px;
-  overflow:hidden;aspect-ratio:4/3;background:var(--tile-light);cursor:zoom-in;margin-bottom:4px;
+  flex:none;position:relative;display:block;padding:0;width:84px;height:84px;
+  border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border));border-radius:14px;
+  overflow:hidden;background:var(--tile-light);cursor:zoom-in;
 }
-.ach-photo img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform .5s cubic-bezier(.2,.8,.3,1)}
-.ach-photo.cover img{object-fit:cover;padding:0}
-.ach-photo:hover img{transform:scale(1.04)}
+.ach-photo img{width:100%;height:100%;object-fit:contain;padding:6px;transition:transform .4s cubic-bezier(.2,.8,.3,1)}
+.ach-photo.cover img{object-fit:cover;object-position:46% 50%;padding:0}
+.ach-photo:hover img{transform:scale(1.08)}
 .ach-photo .zoom{
-  position:absolute;right:9px;top:9px;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
-  background:rgba(0,0,0,.55);color:#fff;opacity:0;transition:.2s;
+  position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.4);color:#fff;opacity:0;transition:.2s;
 }
-.ach-photo .zoom svg{width:14px;height:14px}
+.ach-photo .zoom svg{width:18px;height:18px}
 .ach-photo:hover .zoom,.ach-photo:focus-visible .zoom{opacity:1}
 .ach.has-photo > div{flex:1 1 0;min-width:0}
-.ach-grid{align-items:start}
