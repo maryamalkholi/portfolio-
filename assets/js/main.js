@@ -93,22 +93,72 @@
     if (!reduce) setInterval(function () { if (!paused) step(1); }, 6500);
   }
 
-  /* ---------- contact form -> mailto ---------- */
+  /* ---------- contact form ---------- */
   var form = document.querySelector('[data-contact-form]');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var to = form.getAttribute('data-to');
+      var endpoint = form.getAttribute('data-endpoint');
+      var note = form.querySelector('.form-note');
+      var button = form.querySelector('button[type="submit"]');
       var name = (form.elements.name.value || '').trim();
       var from = (form.elements.email.value || '').trim();
       var subject = (form.elements.subject.value || '').trim() || 'Portfolio enquiry';
       var msg = (form.elements.message.value || '').trim();
-      var body = msg + '\n\n—\n' + name + (from ? '\n' + from : '');
-      window.location.href = 'mailto:' + to +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
-      var note = form.querySelector('.form-note');
-      if (note) note.textContent = 'Opening your email app… if nothing happens, email ' + to + ' directly.';
+
+      function say(text, cls) {
+        if (!note) return;
+        note.className = 'form-note' + (cls ? ' ' + cls : '');
+        note.textContent = text;
+      }
+
+      if (!name || !from || !msg) {
+        say('Please fill in your name, email and message.', 'err');
+        return;
+      }
+
+      function mailtoFallback() {
+        var body = msg + '\n\n—\n' + name + (from ? '\n' + from : '');
+        window.location.href = 'mailto:' + to +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+        say('Could not send from the page, so your email app is opening instead. If nothing happens, write to ' + to + ' directly.', 'err');
+      }
+
+      if (!endpoint || !window.fetch) { mailtoFallback(); return; }
+
+      if (button) button.disabled = true;
+      say('Sending…');
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          email: from,
+          _subject: subject + ' — from ' + name,
+          _template: 'table',
+          _captcha: 'false',
+          message: msg
+        })
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (data) {
+          return { ok: r.ok, data: data };
+        });
+      }).then(function (res) {
+        if (button) button.disabled = false;
+        var success = res.ok && String(res.data.success) !== 'false';
+        if (success) {
+          form.reset();
+          say('Thank you — your message is on its way. I will get back to you shortly.', 'ok');
+        } else {
+          mailtoFallback();
+        }
+      }).catch(function () {
+        if (button) button.disabled = false;
+        mailtoFallback();
+      });
     });
   }
 

@@ -5,6 +5,10 @@
 <title>Geodata Mapping — Maryam Alkholi</title>
 <meta name="description" content="A Python pipeline that geocodes location data through an API and plots it on a map.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/img/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+<meta name="theme-color" content="#a76a12">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -25,13 +29,23 @@
 <section><div class="wrap page-wrap"><div class="content">
 <div class="draft-flag"><b>Draft copy.</b> You didn&rsquo;t send a description for this one, so I wrote a placeholder &mdash; replace it with your own words whenever you like.</div>
 <p><strong>Geodata Mapping</strong> is a Python project that reads a list of raw location strings, resolves each one into geographic coordinates through a geocoding API, stores the results locally so the API is only queried once per location, and then renders every resolved point onto an interactive map.</p>
-<div class="showcase"><h2>Showcase</h2><div class="embed-card">
-<div class="site-preview"><span class="c-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></span><div class="c-txt"><b>View the repository</b><span>github.com/maryamalkholi/Pythonrepo</span></div></div>
-<div class="embed-fallback"><a href="https://github.com/maryamalkholi/Pythonrepo" target="_blank" rel="noopener">View the repository &rarr;</a></div>
+<div class="showcase"><h2>Showcase</h2>
+<div class="embed-card">
+<div class="embed-head"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></span><div class="c-txt"><b>Geodata Mapping</b><span class="sub">The generated map, running live</span></div><span class="spacer"></span><a class="mini-link" href="https://abdulrahmanalkholi.github.io/GeoData/where.html" target="_blank" rel="noopener">Open in a new tab &rarr;</a></div>
+<div class="live-embed" data-live-embed data-site="abdulrahmanalkholi.github.io" data-fallback="../assets/img/GeoDataShot.jpg" data-href="https://abdulrahmanalkholi.github.io/GeoData/where.html">
+<div class="ratio"><iframe src="https://abdulrahmanalkholi.github.io/GeoData/where.html" title="Geodata Mapping &mdash; live preview" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+</div>
+<div class="embed-fallback"><a href="https://abdulrahmanalkholi.github.io/GeoData/where.html" target="_blank" rel="noopener">Open the live site &rarr;</a><span class="why">Live and interactive, running inside this page.</span></div>
+</div>
+<div class="shot-grid">
+<button type="button" class="shot-item" data-lightbox="geodata" data-src="../assets/img/GeoDataShot.jpg" data-caption="Geocoded locations plotted on the map" aria-label="View Geocoded locations plotted on the map"><span class="frame"><img src="../assets/img/GeoDataShot.jpg" alt="Geocoded locations plotted on the map" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></span><span class="shot-cap">Geocoded locations plotted on the map</span></button>
+</div>
+</div>
+<div class="embed-fallback"><a href="https://github.com/maryamalkholi/GeoData" target="_blank" rel="noopener">View the repository &rarr;</a></div>
 </div></div>
 <h2>Technical Focus</h2>
 <ul><li>Consumed a geocoding API and handled its JSON responses</li><li>Cached retrieved results in a local database to avoid repeated API calls</li><li>Handled failed lookups, malformed input and rate limits</li><li>Generated map data and rendered it as an interactive, browsable map</li><li>Practised structuring a multi-stage data pipeline: retrieve, store, transform, visualise</li></ul>
-<div class="link-row"><a class="btn" href="https://github.com/maryamalkholi/Pythonrepo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg> View the code on GitHub</a></div>
+<div class="link-row"><a class="btn" href="https://github.com/maryamalkholi/GeoData" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg> View the code on GitHub</a><a class="btn primary" href="https://abdulrahmanalkholi.github.io/GeoData/where.html" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg> Open the live map</a></div>
 <div class="pnav"><a href="../projects/pagerank.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> PageRank Search Engine &amp; Visualiser</a><a href="../projects/itunes-database.html">iTunes XML to Relational Database <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </div></div></section>
 <footer><div class="wrap foot">

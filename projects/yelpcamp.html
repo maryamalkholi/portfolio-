@@ -5,6 +5,10 @@
 <title>YelpCamp — Maryam Alkholi</title>
 <meta name="description" content="Browse, create and review campgrounds — auth, CRUD and a database behind it all.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/img/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
+<meta name="theme-color" content="#a76a12">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -26,14 +30,24 @@
 
 <p><strong>YelpCamp</strong> is a full-stack web application for discovering and reviewing campgrounds. The project was designed to simulate a real-world platform where users can browse campground listings, view details, create new listings, and share reviews.</p>
 <p>The application combines a dynamic frontend with a backend server and database, allowing user-generated content to be stored and managed rather than simply displaying static information.</p>
-<div class="showcase"><h2>Showcase</h2><div class="embed-card">
-<div class="site-preview"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 11a5 5 0 0 0-7.5-.6L4 12.9A5 5 0 0 0 11.1 20l1.5-1.5"/><path d="M10 13a5 5 0 0 0 7.5.6L20 11.1A5 5 0 0 0 12.9 4l-1.5 1.5"/></svg></span><div class="c-txt"><b>Visit the live site</b><span>Live deployment</span></div></div>
-<div class="embed-fallback"><a href="https://boiling-reef-77260.herokuapp.com/" target="_blank" rel="noopener">Visit the live site &rarr;</a></div>
+<div class="showcase"><h2>Showcase</h2>
+<div class="embed-card">
+<div class="embed-head"><span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg></span><div class="c-txt"><b>YelpCamp</b><span class="sub">The deployed app</span></div><span class="spacer"></span><a class="mini-link" href="https://herokappcreatenew.herokuapp.com/" target="_blank" rel="noopener">Open in a new tab &rarr;</a></div>
+<a class="shot-frame" href="https://herokappcreatenew.herokuapp.com/" target="_blank" rel="noopener"><img src="../assets/img/YelpCampLanding.jpg" alt="The YelpCamp landing page" loading="lazy"><span class="badge-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg> Open the live site</span></a>
+<div class="embed-fallback"><a href="https://herokappcreatenew.herokuapp.com/" target="_blank" rel="noopener">Open the live site &rarr;</a><span class="why">herokappcreatenew.herokuapp.com sends an X-Frame-Options header, so it cannot be embedded &mdash; this is a screenshot of the running app.</span></div>
+</div>
+<div class="shot-grid">
+<button type="button" class="shot-item" data-lightbox="yelpcamp" data-src="../assets/img/YelpCampCampground.jpg" data-caption="A campground listing" aria-label="View A campground listing"><span class="frame"><img src="../assets/img/YelpCampCampground.jpg" alt="A campground listing" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></span><span class="shot-cap">A campground listing</span></button>
+<button type="button" class="shot-item" data-lightbox="yelpcamp" data-src="../assets/img/YelpCampLanding.jpg" data-caption="Landing page" aria-label="View Landing page"><span class="frame"><img src="../assets/img/YelpCampLanding.jpg" alt="Landing page" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></span><span class="shot-cap">Landing page</span></button>
+<button type="button" class="shot-item" data-lightbox="yelpcamp" data-src="../assets/img/YelpCampMain.jpg" data-caption="Browsing all campgrounds" aria-label="View Browsing all campgrounds"><span class="frame"><img src="../assets/img/YelpCampMain.jpg" alt="Browsing all campgrounds" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></span><span class="shot-cap">Browsing all campgrounds</span></button>
+</div>
+</div>
+<div class="embed-fallback"><a href="https://herokappcreatenew.herokuapp.com/" target="_blank" rel="noopener">Visit the live site &rarr;</a></div>
 </div></div>
 <h2>Technical Focus</h2>
 <ul><li>Built a full-stack web application using JavaScript, Node.js, Express and MongoDB</li><li>Created RESTful routes for campground listings and reviews</li><li>Implemented CRUD operations for managing application data</li><li>Worked with MongoDB to store and retrieve user-generated content</li><li>Implemented user authentication and authorisation</li><li>Added form validation and error handling</li><li>Connected the frontend and backend to create a complete interactive application</li><li>Structured the project using backend routing and middleware</li></ul>
 <p>The project gave me practical experience building a complete web application from frontend interaction to backend logic, database management, and user authentication.</p>
-<div class="link-row"><a class="btn" href="https://boiling-reef-77260.herokuapp.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 11a5 5 0 0 0-7.5-.6L4 12.9A5 5 0 0 0 11.1 20l1.5-1.5"/><path d="M10 13a5 5 0 0 0 7.5.6L20 11.1A5 5 0 0 0 12.9 4l-1.5 1.5"/></svg> Open the live app</a></div>
+<div class="link-row"><a class="btn" href="https://herokappcreatenew.herokuapp.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 11a5 5 0 0 0-7.5-.6L4 12.9A5 5 0 0 0 11.1 20l1.5-1.5"/><path d="M10 13a5 5 0 0 0 7.5.6L20 11.1A5 5 0 0 0 12.9 4l-1.5 1.5"/></svg> Open the live app</a><a class="btn gh" href="https://github.com/maryamalkholi/Yelpcamp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.8-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg> View on GitHub</a></div>
 <div class="pnav"><a href="../projects/qasr-amra-ar.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Qasr Amra &mdash; AR Heritage Experience</a><a href="../projects/forkify.html">Forkify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </div></div></section>
 <footer><div class="wrap foot">

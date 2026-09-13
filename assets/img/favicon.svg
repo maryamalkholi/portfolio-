@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Maryam Alkholi">
+  <defs>
+    <linearGradient id="g" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e0a23c"/>
+      <stop offset=".52" stop-color="#a76a12"/>
+      <stop offset="1" stop-color="#1c6b85"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#g)"/>
+  <path d="M16 45V19h6.6l9.4 15.4L41.4 19H48v26h-6.3V30.6l-7.3 11.6h-2.8l-7.3-11.6V45z" fill="#fffaf1"/>
+  <circle cx="49.8" cy="44.6" r="4.4" fill="#fffaf1"/>
+</svg>
