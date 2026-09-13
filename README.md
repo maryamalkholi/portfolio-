@@ -42,6 +42,8 @@ save it as `.png` with the same name and the page will find it.
 | `javascirpt.jpg` | Certificate 4 |
 | `webdev.jpg` | Certificate 5 |
 | `pythonBootcamp.jpg` | Certificate 6 |
+| `comptia-security-plus.png` | Currently Working Certificate 1 (CompTIA Security+) |
+| `iso27001-foundation.jpg` | Currently Working Certificate 2 (ISO/IEC 27001 Foundation) |
 | `DaniaAlsaid.jpg` | Testimonial photo |
 | `NourKharis.jpg` | Testimonial photo |
 | `MohammedMilhim.jpg` | Testimonial photo |
